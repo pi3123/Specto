@@ -24,6 +24,9 @@ pip install -r requirements.txt
 3. Set the values of **inputFolder** and **outputFolder** to their appropriate absolute paths.
 4. Run it and you can find the spectogram in the output folder
 
+## Examples
+![title](Examples/Peter Rudenko - Counterclockwise.png)
+
 ## Roadmap
 *  A simple UI
 * Use Numba to make it faster
