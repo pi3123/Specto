@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 ## Usage
 ### WAV to Spectogrm
-1. Drag and drop the WAV file into the **WAVFiles** folder.
+1. Drag and drop the WAV file into the **WAVFiles** folder. Some examples that work: https://imgur.com/O8JpGYS
 2. Open the **Generate_Spectogram.py** in the **Examples** folder.
 3. Set the values of **inputFolder** and **outputFolder** to their appropriate absolute paths.
 4. Run it and you can find the spectogram in the output folder
@@ -24,8 +24,6 @@ pip install -r requirements.txt
 3. Set the values of **inputFolder** and **outputFolder** to their appropriate absolute paths.
 4. Run it and you can find the spectogram in the output folder
 
-## Examples
-![title](Examples/Peter Rudenko - Counterclockwise.png)
 
 ## Roadmap
 *  A simple UI
