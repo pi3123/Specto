@@ -35,8 +35,8 @@ turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
 		minPhase=-math.pi,
 		maxPhase=math.pi)
 				
-rec  =  turtle.genWavForGram(WAV_FILE_NAME)            # Reading the Audio file
-scipy.io.wavfile.write(OUTPUT_FILE_NAME, 44100, rec)   # Generating the img                      
+rec  =  turtle.genWavForGram(WAV_FILE_NAME)            # Generating the WAV
+scipy.io.wavfile.write(OUTPUT_FILE_NAME, 44100, rec)   # Saving the WAV file 
 ```
 
 
