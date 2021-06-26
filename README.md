@@ -1,3 +1,4 @@
+
 # Spectogram engine
 Converts WAV files to spectograms (.png) and the other way.
 Inspired by the [ARSS ](http://arss.sourceforge.net/) 
@@ -8,21 +9,35 @@ Inspired by the [ARSS ](http://arss.sourceforge.net/)
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies.
 ```bash
-pip install -r requirements.txt
+pip install Specto
 ```
 ## Usage
 ### WAV to Spectogrm
-1. Drag and drop the WAV file into the **WAVFiles** folder. Some examples that work: https://imgur.com/a/FTrHzmD
-2. Open the **Generate_Spectogram.py** in the **Examples** folder.
-3. Set the values of **inputFolder** and **outputFolder** to their appropriate absolute paths.
-4. Run it and you can find the spectogram in the output folder
+```python
+# Loading the worker
+turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
+				maxMagnitude=2026134.8514368106,       # Maximum Frequency
+				minPhase=-math.pi,
+				maxPhase=math.pi)
+				
+rate, audData  =  scipy.io.wavfile.read(WAV_FILE_NAME) # Reading the Audio file
+audData  =  audData.sum(axis=1) /  2                   # combining 2 channels to one
+img = turtle.genGramForWav(audData)                    # Generating the img
+img.save(OUTPUT_FILE_NAME, "PNG")                      # saving the img
+```
 
 
 ### Spectogram to WAV
-1.  Drag and drop the **png** file into the **Spectograms** folder.
-2. Open the **Generate_WAVs.py** in the **Examples** folder
-3. Set the values of **inputFolder** and **outputFolder** to their appropriate absolute paths.
-4. Run it and you can find the spectogram in the output folder
+```python
+# Loading the worker
+turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
+				maxMagnitude=2026134.8514368106,       # Maximum Frequency
+				minPhase=-math.pi,
+				maxPhase=math.pi)
+				
+rec  =  turtle.genWavForGram(WAV_FILE_NAME)            # Reading the Audio file
+scipy.io.wavfile.write(OUTPUT_FILE_NAME, 44100, rec)   # Generating the img                      
+```
 
 
 ## Roadmap
