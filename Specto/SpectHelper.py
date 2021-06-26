@@ -1,5 +1,7 @@
 from PIL import Image
-from utils import *
+import numpy as np
+import math
+from Specto.utils import genLinearScale, recoverLinearScale
 
 
 class Turtle:
