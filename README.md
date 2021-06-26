@@ -16,9 +16,9 @@ pip install Specto
 ```python
 # Loading the worker
 turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
-				maxMagnitude=2026134.8514368106,       # Maximum Frequency
-				minPhase=-math.pi,
-				maxPhase=math.pi)
+		maxMagnitude=2026134.8514368106,       # Maximum Frequency
+		minPhase=-math.pi,
+		maxPhase=math.pi)
 				
 rate, audData  =  scipy.io.wavfile.read(WAV_FILE_NAME) # Reading the Audio file
 audData  =  audData.sum(axis=1) /  2                   # combining 2 channels to one
@@ -31,9 +31,9 @@ img.save(OUTPUT_FILE_NAME, "PNG")                      # saving the img
 ```python
 # Loading the worker
 turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
-				maxMagnitude=2026134.8514368106,       # Maximum Frequency
-				minPhase=-math.pi,
-				maxPhase=math.pi)
+		maxMagnitude=2026134.8514368106,       # Maximum Frequency
+		minPhase=-math.pi,
+		maxPhase=math.pi)
 				
 rec  =  turtle.genWavForGram(WAV_FILE_NAME)            # Reading the Audio file
 scipy.io.wavfile.write(OUTPUT_FILE_NAME, 44100, rec)   # Generating the img                      
