@@ -14,6 +14,7 @@ pip install Specto
 ## Usage
 ### WAV to Spectogrm
 ```python
+from Specto import Turtle
 # Loading the worker
 turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
 		maxMagnitude=2026134.8514368106,       # Maximum Frequency
@@ -29,6 +30,7 @@ img.save(OUTPUT_FILE_NAME, "PNG")                      # saving the img
 
 ### Spectogram to WAV
 ```python
+from Specto import Turtle
 # Loading the worker
 turtle = Turtle(minMagnitude=0.004416916563059203,     # Minimum frequency
 		maxMagnitude=2026134.8514368106,       # Maximum Frequency
